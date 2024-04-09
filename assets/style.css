@@ -16,7 +16,7 @@
 
 body {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background: url(./images/stars-BG.jpg) no-repeat center center fixed;
 }
 
@@ -112,6 +112,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: ;
 }
 
 .hero-banner {
@@ -134,7 +135,7 @@ main {
     grid-template-rows: 1fr 1fr;
     font-family: var(--bannerFont);
     border: var(--border-gray);
-    width: 50%;
+    width: 1100px;
     background-color: rgb(0, 0, 0, 80%);
     padding: 1vh 2vw;
     text-align: center;
@@ -148,7 +149,7 @@ main {
 }
 
 .quote p {
-    font-size: 2em;
+    font-size: 2rem;
     grid-row: 2 / -1;
     grid-column: 2 / -1;
 }
@@ -162,7 +163,7 @@ main {
     margin-bottom: 8vh;
 }
 
-.article {
+article {
     padding: 4vh 2vw;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -170,7 +171,7 @@ main {
     align-items: center;
 }
 
-.article h2 {
+article h2 {
     font-family: var(--mainFont);
     font-size: 3rem;
     text-align: right;
@@ -268,6 +269,9 @@ main {
     border-right: solid .3vw rgb(41, 255, 77);
 }
 
+.contact li {
+    margin: 1vh 2vw;
+}
 
 .contact a {
     color: var(--link-color);
@@ -277,7 +281,6 @@ main {
     transition: all .2s;
     background-position: center bottom;
     background-repeat: no-repeat;
-    padding: .3rem 0;
 }
 
 .contact a:hover {
@@ -290,6 +293,7 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
     list-style: none;
 }
@@ -298,11 +302,12 @@ footer {
     display: flex;
     justify-content: center;
     background-color: black;
-    padding: 3vh;
+    padding: 3vh 0;
     font-family: var(--infoFont);
     font-size: 1.2rem;
     color: var(--link-color);
     border-top: var(--border-gray);
+    box-sizing: border-box;
 }
 
 footer a {
@@ -320,7 +325,184 @@ footer a:hover {
         right: 3%;
     }
 
-    .article h2 {
+    article h2 {
         font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 1450px) {
+    .top-header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top-header ul {
+        width: 50%;
+    }
+
+    .quote h2 {
+        font-size: 1.2rem;
+    }
+
+    .quote p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .top-header ul {
+        width: 70%;
+    }
+
+    .quote {
+        transform: scale(.8);
+        right: -6%;
+        bottom: 1%;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    
+    .quote p {
+        margin-left: 10vw;
+    }
+
+    article h2 {
+        font-size: 2rem;
+    }
+
+    .hacking, .infiltration, .combat, .pilot, .fixer {
+        grid-column: 1 / -1;
+    }
+
+    .hacking {
+        grid-row: 1 / 2;
+        min-height: 30vh;
+        background-position: center 15%;
+    }
+
+    .infiltration {
+        grid-row: 2 / 3;
+    }
+
+    .combat {
+        grid-row: 3 / 4;
+    }
+
+    .pilot {
+        grid-row: 4 / 5;
+    }
+
+    .fixer {
+        grid-row: 5 / -1;
+    }
+
+    .contact a {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 760px) {
+    .main-title h1 {
+        font-size: 4rem;
+    }
+
+    .main-title h2 {
+        font-size: 1.3rem;
+        margin-bottom: 2vh;
+    }
+    
+    .disclaimer {
+        font-size: .7rem;
+    }
+
+    .top-header ul {
+        width: 100%;
+    }
+
+    .top-menu a {
+        font-size: 1rem;
+    }
+    
+    .hero-banner {
+        width: 100%;
+        margin: 4vh 0;
+        border-left: none;
+        border-right: none;
+    }
+    
+    .articles {
+        width: 100%;
+    }
+    
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 3vh 4vw;
+    }
+
+    .content p {
+        font-weight: 300;
+    }
+
+    .myJourney h2 {
+        border: none;
+    }
+
+    .myAbilities h2 {
+        border: none;
+    }
+
+    .findMe h2 {
+        border: none;
+    }
+
+    .abilities {
+        width: 100%;
+        gap: 3vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .content p {
+        font-size: .8rem;
+        font-weight: 200;
+    }
+
+    .findMe .content {
+        width: 100%;
+    }
+    
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .disclaimer {
+        margin: 1vh 10vw;
+    }
+    
+    .main-title h1 {
+        font-size: 3rem;
+    }
+
+    .main-title h2 {
+        font-size: 1rem;
+    }
+    
+    .ability h3 {
+        font-size: 1.5rem;
+    }
+    
+    footer {
+        font-size: .8rem;
     }
 }
