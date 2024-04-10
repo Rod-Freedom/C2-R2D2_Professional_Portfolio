@@ -4,6 +4,7 @@ The Ultimate Astromech
 ## **ABOUT THE PROJECT**
 **Overview**
 
+This is a professional portfolio. Get to know me and my abilities to hire the best in business.
 No matter what your job is, you'll be successful with me around. I have a 100% success rate and have completed every task.
 If you require a hacker, bodyguard, spy, intel, pilot, handyman, or even someone to talk to, I'm your best bet.
 
@@ -43,7 +44,7 @@ This is how the site should look like.<br>
 ![Landing Page](./assets/images/R2-D2_Portfolio_Demo.GIF)
 
 ## Get Started
-[Click here](https://rod-freedom.github.io/C2-R2D2_Professional_Portfolio/), and meet the best astromech around!
+Just click [here](https://rod-freedom.github.io/C2-R2D2_Professional_Portfolio/), and meet the best astromech around!
 
 ## License
 This project is under an [MIT License](https://github.com/Rod-Freedom/C2-R2D2_Professional_Portfolio/blob/main/LICENSE). See the LICENSE file for more details.
